@@ -1,0 +1,49 @@
+body,*{
+    padding: 0;
+    margin: 0;
+}
+div{
+    border-bottom: 5px solid black;
+    overflow: hidden;
+    width: 500px;
+    height: 60px;
+    position: relative;
+}
+span:nth-child(1){
+  font-size: 3.3rem;
+  color: blueviolet;
+  z-index: 1;
+}
+span:nth-child(2){
+    z-index: 0;
+    left: -100%;
+    animation: anime-span2 2s 2s forwards ease-in-out;
+}
+p{
+    font-size: 3rem;
+    background-color: aqua;
+    overflow: hidden;
+    margin-top: 100px;
+    /* position: relative; */
+    animation: anime-p 13s forwards ease-in-out;
+}
+span{
+    position: absolute;
+    background-color: white;
+}
+@keyframes anime-p{
+    form{
+        margin-top: 100%;
+    }
+    to{
+        margin-top: 0%;
+    }
+}
+@keyframes anime-span2{
+    form{
+        left: -100%;
+    }
+    to{
+        left: 8%;
+    }
+}
